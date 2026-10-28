@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Feedback</title>
+</head>
+<body>
+  <!--
+    ERRORS FOUND (line numbers refer to the given code):
+    Error 1 (Line 10): header opened with the header tag but closed with a closing head tag. Fixed to a closing header tag.
+    Error 2 (Line 20): Rating is a header cell but used a td tag. Changed to th.
+    Error 3 (Line 25-26): the row for Week 1 was never closed, so a new tr started inside it. Added the missing closing tr.
+    Error 4 (Line 28): colspan=3 makes this row 4 columns wide but the table only has 3. Replaced with a normal Topic cell plus a Rating cell.
+    Error 5 (Line 32): Semantic HTML cell is missing its closing td tag. Added it.
+    Error 6 (Line 39-40): label for=name does not match the input id=fullname. Label now uses for=fullname.
+    Error 7 (Line 42, 44): radio buttons have different name values (good, poor), so both can be selected. All now share name=rating.
+    Error 8 (Line 41): the Overall rating label points to no input, so clicking it does nothing. Replaced with a fieldset and legend.
+    Error 9 (Line 46-47): label for=labs does not match the checkbox id=lab. Label now uses for=lab.
+    Error 10 (Line 49): form closed with a misspelled closing from tag. Fixed to a closing form tag.
+    Error 11 (Line 52): the copyright entity is missing its semicolon. Fixed to the proper copyright entity.
+  -->
+
+  <header>
+    <h1>CSF3133 Course Feedback</h1>
+  </header>
+
+  <!-- NAV: internal links to each section (a link to the new Student Comments section was added) -->
+  <nav>
+    <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
+  </nav>
+
+  <!-- SECTION: Feedback Summary table -->
+  <section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+      <tr>
+        <th>Week</th>
+        <th>Topic</th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Introduction to HTML</td>
+        <td>4.5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tables and Forms</td>
+        <td>4.2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Semantic HTML</td>
+        <td>4.0</td>
+      </tr>
+      <!-- NEW: Weeks 4 and 5 share one Topic cell using rowspan="2", so Week 5 has no Topic cell -->
+      <tr>
+        <td>4</td>
+        <td rowspan="2">Mini Project</td>
+        <td>4.3</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>4.4</td>
+      </tr>
+      <!-- NEW: Average Rating row, label spans Week and Topic columns using colspan="2" -->
+      <tr>
+        <td colspan="2">Average Rating</td>
+        <td>4.3</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- SECTION: Feedback form -->
+  <section id="form">
+    <h2>Give Your Feedback</h2>
+    <form action="submit_feedback.php" method="post">
+      <label for="fullname">Name:</label>
+      <input type="text" id="fullname" name="name"><br>
+
+      <!-- NEW: E-mail text input with matching label -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <!-- Radio buttons: all share name="rating" so only one can be selected (third option Average is new) -->
+      <fieldset>
+        <legend>Overall rating:</legend>
+        <input type="radio" id="good" name="rating" value="good">
+        <label for="good">Good</label>
+        <input type="radio" id="average" name="rating" value="average">
+        <label for="average">Average</label>
+        <input type="radio" id="poor" name="rating" value="poor">
+        <label for="poor">Poor</label>
+      </fieldset>
+
+      <input type="checkbox" id="lab" name="lab" value="yes">
+      <label for="lab">I attended all labs</label><br>
+
+      <!-- NEW: group of checkboxes for topics needing more practice -->
+      <fieldset>
+        <legend>Topics I want more practice on:</legend>
+        <input type="checkbox" id="p-tables" name="practice" value="tables">
+        <label for="p-tables">Tables</label>
+        <input type="checkbox" id="p-forms" name="practice" value="forms">
+        <label for="p-forms">Forms</label>
+        <input type="checkbox" id="p-semantic" name="practice" value="semantic">
+        <label for="p-semantic">Semantic HTML</label>
+      </fieldset>
+
+      <!-- NEW: drop-down list for Section/Group -->
+      <label for="group">Section/Group:</label>
+      <select id="group" name="group">
+        <option value="g1">Group 1</option>
+        <option value="g2">Group 2</option>
+        <option value="g3">Group 3</option>
+      </select><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- NEW SECTION: Student Comments, with two articles (student name in h3, comment in p) -->
+  <section id="comments">
+    <h2>Student Comments</h2>
+    <!-- ARTICLE 1 -->
+    <article>
+      <h3>Amin</h3>
+      <p>The lab exercises helped me understand tables and forms much better.</p>
+    </article>
+    <!-- ARTICLE 2 -->
+    <article>
+      <h3>Haziq</h3>
+      <p>Semantic HTML was new to me, and I would like more practice with it.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+  </footer>
+</body>
+</html>
