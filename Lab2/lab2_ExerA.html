@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2_ExerA</title>
+</head>
+<body>
+    <header>
+        <h1>Programming Workshop 2026</h1>
+        <p>Learn, Practice, and Master Programming!</p>
+    </header>
+
+    <nav>
+        <a href="About">About the event</a>
+        <a href="Schedule">Event Schedule</a>
+        <a href="Registration">Registration</a>
+    </nav>
+
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <!--Introduce speakers-->
+        <article>
+            <h3>Speaker 1: Mr. Daniel Lee</h3>
+            <p>Whether you're a beginner or an experienced developer, this workshop is designed to enhance your skills and knowledge. Don't miss this opportunity to network with fellow programmers and industry professionals.</p>
+        </article>
+
+        <!--Introduce Activities-->
+        <article>
+            <h3>Activity : Hand-on Coding Workshop</h3>
+            <p>Get hands-on experience with the latest programming languages and tools. This interactive session will allow you to apply what you've learned in a real-world setting.</p>
+        </article>  
+    </section> 
+
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1"> 
+           <thead> 
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+           </theadt>
+
+           <tbody>
+           <tr>
+            <td>8:30 AM - 9:00 AM</td>
+            <td>Opening Ceremony</td>
+            <td>Auditorium</td>
+            <td>Event Director</td>
+        </tr>
+
+        <!-- Rowspan: One venue shared by two consecutive activities -->
+        <tr>
+            <td>9:00 AM - 10:00 AM</td>
+            <td>Introduction to Programming</td>
+            <td rowspan="2">Computer Laboratory</td>
+            <td>Mr. Daniel Lee</td>
+        </tr>
+
+        <tr>
+            <td>10:00 AM - 11:00 AM</td>
+            <td>Hands-on Coding Workshop</td>
+            <td>Mr. Daniel Lee</td>
+        </tr>
+
+        <!-- Colspan: Break spans Activity, Venue and Person in Charge -->
+        <tr>
+            <td>11:00 AM - 11:15 AM</td>
+            <td colspan="3">Morning Tea Break</td>
+        </tr>
+
+        <tr>
+            <td>11:15 AM - 12:30 PM</td>
+            <td>Programming Challenge</td>
+            <td>Computer Laboratory</td>
+            <td>Technical Team</td>
+        </tr>
+
+        <tr>
+            <td>12:30 PM - 2:00 PM</td>
+            <td>Lunch Break</td>
+            <td>Cafeteria</td>
+            <td>Food Committee</td>
+        </tr>
+
+        <tr>
+            <td>2:00 PM - 3:00 PM</td>
+            <td>Project Presentation</td>
+            <td>Auditorium</td>
+            <td>Student Participants</td>
+        </tr>
+
+        <tr>
+            <td>3:00 PM - 3:30 PM</td>
+            <td>Award Ceremony and Closing</td>
+            <td>Auditorium</td>
+            <td>Event Director</td>
+            </tr>
+              </tbody> 
+        </table>
+    </section>
+
+    <section id="registration">
+        <h2>Event Registration</h2>
+        <p>To register for the Programming Workshop 2026, please fill out the registration form below:</p>
+           <form action="register.html" method="post">
+
+            <!-- Input Student Full Name-->
+            <label for="Fullname">Full Name:</label><br>
+            <input type="text" id="Fullname" name="Fullname" required><br><br>
+
+            <!-- Input Student Matric Number-->
+            <label for="matric">Matric Number:</label><br>
+            <input type="text" id="matric" name="matric" required><br><br>
+
+            <!-- Input Student Email Address-->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <!-- Radio buttons for year study -->
+               <p>Year of Study:</p>
+            <input type="radio" id="year1" name="year" value="Year 1" required>
+            <label for="year1">Year 1</label><br>
+
+            <input type="radio" id="year2" name="year" value="Year 2">
+            <label for="year2">Year 2</label><br>   
+
+            <input type="radio" id="year3" name="year" value="Year 3">
+            <label for="year3">Year 3</label><br>
+
+            <input type="radio" id="year4" name="year" value="Year 4">
+            <label for="year4">Year 4</label><br><br>
+
+            <!--Checkboxes for prefered workshop session-->
+            <p>Select the sessions you are interested in:</p>
+            <input type="checkbox" id="session1" name="session" value="Session 1">
+            <label for="session1">Session 1: Introduction to Programming Concepts</label><br>
+
+            <input type="checkbox" id="session2" name="session" value="Session 2">
+            <label for="session2">Session 2: Hands-on Coding Workshop</label><br>
+
+            <input type="checkbox" id="session3" name="session" value="Session 3">
+            <label for="session3">Session 3: Programming Challenge</label><br>
+
+            <input type="checkbox" id="session4" name="session" value="Session 4">
+            <label for="session4">Session 4: Project Presentation </label><br><br>
+
+            <!-- Dropdown list programme or faculty -->
+            <label for="programme">Select your Programme/Faculty:</label><br>
+            <select id="programme" name="programme" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Informatic maritime">Informatic Maritime</option>
+                <option value="Mobile Computing">Mobile Computing</option>
+                <option value="Data Science">Data Science</option>
+
+            </select><br><br>
+
+            <!-- Submit button -->
+
+        </form>
+        </section >
+
+        !-- Footer Section: Organiser information and copyright -->
+    <footer>
+        <p>Organised by the Faculty of Computing</p>
+        <p>&copy; 2026 Programming Workshop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+        
