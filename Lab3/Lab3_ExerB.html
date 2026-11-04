@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Booking - Campus Cinema</title>
+</head>
+<body>
+
+<!--
+ERROR IDENTIFICATION:
+
+Error 1 (Line 1): Incomplete DOCTYPE declaration.
+Error 2 (Line 9): Incorrect nesting of span and h1.
+Error 3 (Line 11): Span used instead of div for content.
+Error 4 (Line 13): Less-than symbol must use &lt;.
+Error 5 (Line 13): Ampersand must use &amp;.
+Error 6 (Line 14): String concatenation instead of numeric addition.
+Error 7 (Line 18): Incorrect email type (emial).
+Error 8 (Line 18): Missing required attribute.
+Error 9 (Line 22-23): Datalist ID does not match input list.
+Error 10 (Line 32): Incorrect range min and max values.
+Error 11 (Line 33): Incorrect output for attribute.
+Error 12 (Line 38): Incorrect copyright entity capitalization.
+Error 13 (Line 41 onward): Extra duplicate closing HTML tags.
+-->
+
+<!-- Header Section -->
+<div id="header">
+
+    <h1>e-Ticket<span> Your Campus Cinema</span></h1>
+</div>
+
+<!-- Main Content Section -->
+ <div id="main">
+    <h2>Book Your Tickets!</h2>
+    <p>
+        Promotion: tickets&lt;RM10 for students &amp; staff!
+    </p>
+
+    <!-- Ticket Booking Form -->
+    <form action="booking.php"
+    oninput="
+    document.getElementById('total').value =
+    Number(document.getElementById('adult').value) +
+    Number(document.getElementById('child').value);
+    
+    document.getElementById('price').value =
+    Number(document.getElementById('adult').value) * 12 +
+    Number(document.getElementById('child').value) * 8;
+    ">
+
+    <!-- Customer Information -->
+
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" name="name" 
+    placeholder="Enter your name" 
+    required autofocus>
+    <br><br>
+
+     <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email"
+               required>
+        <br><br>
+
+        <!-- PHONE NUMBER -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"
+               placeholder="Enter your phone number"
+               required>
+        <br><br>
+
+        <!-- SHOW DATE AND TIME -->
+        <label for="date">Show Date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+        <label for="time">Show Time:</label>
+        <input type="time" id="time" name="time">
+        <br><br>
+
+        <!-- MOVIE SELECTION -->
+        <label for="movie">Movie:</label>
+
+        <input type="text" id="movie" name="movie"
+               list="movies">
+
+        <datalist id="movies">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+            <option value="The Lost World">
+        </datalist>
+
+        <br><br>
+
+        <!-- TICKET QUANTITY -->
+        <label for="adult">Adult Tickets:</label>
+        <input type="number" id="adult" name="adult"
+               min="0" value="0">
+        <br><br>
+
+        <label for="child">Child Tickets:</label>
+        <input type="number" id="child" name="child"
+               min="0" value="0">
+        <br><br>
+
+        <!-- SERVICE RATING -->
+        <label for="rating">Rate Our Service:</label>
+        <input type="range" id="rating" name="rating"
+               min="1" max="5" step="1">
+        <br><br>
+
+        <!-- TOTAL TICKET CALCULATOR -->
+        <h3>Ticket Summary</h3>
+
+        Total Tickets:
+        <output id="total" name="total"
+                for="adult child">0</output>
+
+        <br><br>
+
+        <!-- TOTAL PRICE CALCULATOR -->
+        Adult Ticket = RM12
+        <br>
+        Child Ticket = RM8
+        <br><br>
+
+        Total Price: RM
+        <output id="price" name="price"
+                for="adult child">0</output>
+
+        <br><br>
+
+        <input type="submit" value="Book Now">
+
+    </form>
+
+</div>
+
+<!-- SIDEBAR SECTION -->
+<div id="sidebar">
+
+    <h2>Now Showing</h2>
+
+    <ul>
+
+        <li>
+            <strong>Space Rangers</strong>
+            <span> (13+)</span>
+            <a href="https://www.youtube.com/results?search_query=Space+Rangers+movie+trailer">
+                Watch Trailer
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Kampung Comedy</strong>
+            <span> (U)</span>
+            <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer">
+                Watch Trailer
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>The Lost World</strong>
+            <span> (13+)</span>
+            <a href="https://www.youtube.com/results?search_query=The+Lost+World+movie+trailer">
+                Watch Trailer
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- FOOTER SECTION -->
+<div id="footer">
+
+    <p>
+        e-Ticket&reg; &ndash; Campus Cinema
+        &lt; RM10 every Tuesday.
+    </p>
+
+    <p>
+        Students &amp; Staff Welcome!
+    </p>
+
+    <p>
+        &copy; 2026 CineKampus. All rights reserved.
+    </p>
+
+</div>
+
+</body>
+</html>
