@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bakery Online Order</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        <h1>CampusBake&reg;<span>Freshly Baked For You</span></h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id="nav">
+        <a href="#Home">Home</a> |
+        <a href="#Menu">Menu</a> |
+        <a href="#Order">Order</a> 
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="main">
+        <h2>Welcome to CampusBaking!</h2>
+        <p> Welcome to <strong>CampusBaking</strong>!
+            We offer <em>a variety of freshly baked goods</em> made with the finest ingredients. Explore our menu and place your order online for a delightful experience.
+            Visit our <span>special menu</span> and <a href="#menu">check our prices</a>.
+        </p>
+    </div>
+
+    <!-- Order Form Section -->
+     <div id="order-form">
+        <h2>Place Your Order</h2>
+        <form oninput="document.getElementById('total').value = 
+        (Number(document.getElementById('cupcakes').value) * 3 +
+        Number(document.getElementById('slice').value) * 5).toFixed(2)">
+
+            <label for="customer">Customer Name:</label>
+            <input type="text" id="customer" name="customer" 
+                   placeholder="Enter your name"
+                   required autofocus>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <br><br>
+
+            <label for="date">pick-up date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+
+            <label for="time">pick-up time:</label>
+            <input type="time" id="time" name="time">
+            <br><br>
+
+            <label for="flavour">Flavour:</label>
+            <input type="text" id="flavour" name="flavour" placeholder="Enter the flavour" required>
+            <br><br>
+
+            <datalist id="flavours">
+                <option value="Chocolate"></option>
+                <option value="Vanilla"></option>
+                <option value="Strawberry"></option>
+                <option value="Blueberry"></option>
+            </datalist>
+            <br><br>
+
+            <label for="icing">Icing Colour:</label>
+            <input type="text" id="icing" name="icing" placeholder="Enter the icing colour" required>
+            <br><br>
+
+            <label for="sweetness">Sweetness Level (1-5):</label>
+            <input type="number" id="sweetness" name="sweetness" min="1" max="5" step="1">
+            <br><br>
+            
+            <!-- Price Calculator -->
+             <h2>Price Calculator</h2>
+
+            <label for="cupcakes">Number of Cupcakes (RM 3.00 each):</label>
+            <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
+            <br><br>
+
+            <label for="slice">Cake Slices (RM 5.00 each):</label>
+            <input type="number" id="slice" name="slice" min="0" value="0">
+            <br><br>
+
+            <Strong>Total Price: RM 
+                <output id="total" name="total" for="cupcakes slice">0.00</output>
+            </Strong>
+            <br><br>
+
+            <input type="submit" value="Submit Order">
+
+        </form>
+        </div>
+    </div>
+
+    <!-- SIDEBAR SECTION -->
+    <div id="sidebar">
+        <h2 id="menu">Price List</h2>
+
+        <ul>
+            <li>Cupcake - RM 3.00</li>
+            <li>Cake Slice - RM 5.00</li>
+            <li>Chocolate Cake - RM 15.00</li>
+            <li>Cheese Cake - RM 12.00</li>
+        </ul>
+
+        <p>Orders &gt; 10 pieces get a free drink!</p>
+        <p>Special Offer: &pound;10 discount.</p>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+        <p>
+            &copy; 2026 CampusBake&reg;.
+            All rights reserved.
+            Enjoy our fresh bakery products!
+        </p>
+    </div>
+</body>
+
+</html>
