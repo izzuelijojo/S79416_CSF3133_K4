@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visit Terengganu</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #006994;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Visit Terengganu</h1>
+        <p>Discover the Beauty of Malaysia's East Coast</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#trip">Trip Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+
+        <div class="container">
+
+            <article class="card">
+                <h3>Redang Island</h3>
+                <p>Enjoy beautiful beaches and crystal-clear water.</p>
+                <p class="old-price">RM 299</p>
+                <p class="price">RM 199</p>
+            </article>
+
+            <article class="card">
+                <h3>Perhentian Island</h3>
+                <p>Experience exciting snorkelling and marine life.</p>
+                <p class="old-price">RM 350</p>
+                <p class="price">RM 250</p>
+            </article>
+
+            <article class="card">
+                <h3>Kap​as Island</h3>
+                <p>Relax and enjoy the peaceful tropical environment.</p>
+                <p class="old-price">RM 200</p>
+                <p class="price">RM 150</p>
+            </article>
+
+        </div>
+
+        <p class="center">Trip Seats Filled:</p>
+
+        <meter min="0" max="40" value="28">
+            28 out of 40
+        </meter>
+
+        <p class="center">28 out of 40 seats have been filled.</p>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Explore Terengganu</h2>
+
+        <figure>
+            <video width="640" height="360" controls>
+                <source src="terengganu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <figcaption class="caption">
+                Discover the beautiful destinations in Terengganu.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Trip Registration Form -->
+    <section id="trip">
+        <h2>Plan Your Trip</h2>
+
+        <form class="trip-form">
+
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <p>Traveller Type:</p>
+
+            <input type="radio" name="traveller" value="Student">
+            Student
+
+            <input type="radio" name="traveller" value="Staff">
+            Staff
+
+            <input type="radio" name="traveller" value="Public">
+            Public
+
+            <p>Interests:</p>
+
+            <input type="checkbox" name="interest" value="Islands">
+            Islands
+
+            <input type="checkbox" name="interest" value="Food">
+            Food
+
+            <input type="checkbox" name="interest" value="Culture">
+            Culture
+
+            <input type="checkbox" name="interest" value="Nature">
+            Nature
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Visit Terengganu</p>
+
+        <address>
+            Contact us:
+            <a href="mailto:jojotourism@gmail.com">
+                jojotourism@gmail.com
+            </a>
+        </address>
+    </footer>
+
+</body>
+</html>
