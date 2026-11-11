@@ -1,0 +1,184 @@
+/* General Styling */
+body {
+    margin: 0;
+    background-color: #f0f8ff;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #004d66;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #00a6a6;
+}
+
+/* Link States */
+a:link {
+    color: #006994;
+}
+
+a:visited {
+    color: #7d3c98;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+a:active {
+    color: #c0392b;
+}
+
+/* Destinations Section */
+#destinations {
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #006994;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Text Decoration */
+h1 {
+    text-decoration: overline;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+/* Video Section */
+#video {
+    text-align: center;
+    padding: 30px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    font-style: italic;
+    color: #555555;
+}
+
+/* Trip Form */
+#trip {
+    padding: 30px;
+    text-align: center;
+}
+
+.trip-form {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #cccccc;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.trip-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.trip-form button {
+    background-color: #006994;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.trip-form button:hover {
+    background-color: #004d66;
+}
+
+/* Footer */
+footer {
+    background-color: #004d66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Center Text */
+.center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trip-form {
+        width: 85%;
+    }
+
+    nav a {
+        padding: 12px;
+    }
+}
