@@ -1,0 +1,30 @@
+
+/* Navigation Bar Styling */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #784212;
+    text-align: center;
+}
+
+/* Navigation List */
+nav li {
+    display: inline-block;
+}
+
+/* Navigation Links */
+nav a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Navigation Hover Effect */
+nav a:hover {
+    background-color: #D2691E;
+    color: white;
+}
